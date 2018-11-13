@@ -12,10 +12,10 @@ Up until now, our graph API hasn't been very useful. We can inspect our graph's 
 Before we can start writing resolvers, we need to learn more about what a resolver function looks like. Resolver functions accept four arguments:
 
 ```js
-fieldName: (parent, args, context, info) => data
+fieldName: (obj, args, context, info) => data
 ```
 
-* **root**: An object that contains the result returned from the resolver on the parent type
+* **obj**: An object that contains the result returned from the resolver on the parent type
 * **args**: An object that contains the arguments passed to the field
 * **context**: An object shared by all resolvers in a GraphQL operation. We use the context to contain per-request state such as authentication information and access our data sources.
 * **info**: Information about the execution state of the operation which should only be used in advanced cases
